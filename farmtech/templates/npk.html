@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmtech</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/tablogo.png') }}"/>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel='stylesheet' type='text/css' />
+    <script type="text/JavaScript" src="{{ url_for('static', filename='scripts/cities.js') }}"></script>
+
+</head>
+<body>
+    <nav>
+        <img src="{{ url_for('static', filename='images/logo_f.jpeg') }}">
+        <div class="logo">FarmTech</div>
+            <ul class="navLinks">
+                <li class="links">
+                    <a class="txt" href="{{ url_for('home') }}">Home</a>
+                </li>
+                <li class="links">
+                    <a class="txt" href="{{ url_for('crop') }}">Crop</a>
+                </li>
+                <li class="links">
+                    <a class="txt" href="{{ url_for('fertilizer') }}">Fertilizer</a>
+                </li>
+                <li class="links">
+                    <a class="txt" href="{{ url_for('npk_value') }}">NPK Values</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class = "fertilizer">
+        <h2>Generate best fertilizer options for your crop</h2>
+  
+        <div class="form-container">
+            <form method="POST" action="{{ url_for('npk_value') }}">
+                
+                
+                <div class="form-group">
+                    <label for="State">State</label>
+                    <select id="sts" name="stt" class="form-control" onchange="print_city('state', this.selectedIndex);" required>
+                    </select>
+                </div>
+
+                
+                <div class="form-group">
+                    <label for="City">City</label>
+                    <select id="state" name="city" class="form-control" required>
+                    </select>
+                </div>
+
+                <script>
+                    print_state("sts");
+                </script>
+  
+                
+                <div class="form-group">
+                    <label for="soil" style="font-size: 17px"
+                      ><b>Choose Soil Type</b></label
+                    >
+                    <select
+                      name="cropname"
+                      class="form-control"
+                      id="crop"
+                      placeholder="Select a crop"
+                      style="font-weight: bold"
+                      required
+                    >
+                      <option selected>Select Soil</option>
+                      <option>Sandy Soil</option>
+                      <option>Clayey Soil</option>
+                      <option>Saline soil</option>
+                      <option>Arial Soil</option>
+                      <option>Laterite Soil</option>
+                      <option>Red Soil</option>
+                      <option>Black Soil</option>
+                      <option>Aluvial Soil</option>
+                      <option>Mountain Soil</option>
+                      <option>Loamy Soil</option>
+                      <option>Chestnut Soil</option>
+                    </select>
+                  </div>
+  
+      <button type="submit">Predict</button>
+              </form>
+          </div>
+      </section>
+
+    
+       <footer>
+        <div class = 'container'>
+            <div class='banner'>
+                <div class='left'>FarmTech</div>
+                <div class='right'>
+                    <p>still pending</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

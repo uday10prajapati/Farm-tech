@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmtech</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/tablogo.png') }}"/>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel='stylesheet' type='text/css' />
+    <style>
+        .cresult{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url("{{ url_for('static', filename='images/service.jpg') }}") no-repeat center center;
+        }
+
+            .contact-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            }
+
+            h1 {
+            margin-bottom: 20px;
+            color: #333;
+            }
+
+            p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 18px;
+            }
+</style>
+</head>
+<body>
+
+    <nav>
+        <img src="{{ url_for('static', filename='images/logo_f.jpeg') }}">
+        <div class="logo">FarmTech</div>
+        <ul class="navLinks">
+            <li class="links"><a class="txt" href="{{ url_for('home') }}">Home</a></li>
+            <li class="links"><a class="txt" href="{{ url_for('crop') }}">Crop</a></li>
+            <li class="links"><a class="txt" href="{{ url_for('fertilizer') }}">Fertilizer</a></li>
+            <li class="links"><a class="txt" href="{{ url_for('npk_value') }}">NPK Values</a></li>
+        </ul>
+    </nav>
+<section class = "cresult">
+<div class="contact-container">
+    <h1 class="text-center"><b>You should grow <i>{{ prediction }} </i>in your farm</b></h1>
+</div>
+</section>
+
+<footer>
+    <div class='container'>
+        <div class='banner'>
+            <div class='left'>FarmTech</div>
+            <div class='right'>
+                <p>still pending</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

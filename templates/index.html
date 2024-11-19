@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmtech</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/tablogo.png') }}"/>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel='stylesheet' type='text/css' />
+    <script type="text/JavaScript" src="{{ url_for('static', filename='scripts/cities.js') }}"></script>
+
+</head>
+<body>
+    <!--navbar--> 
+    <nav>
+        <img src="{{ url_for('static', filename='images/logo_f.jpeg') }}">
+		<div class="logo">FarmTech</div>
+			<ul class="navLinks">
+				<li class="links">
+					<a class="txt" href="{{ url_for('home') }}">Home</a>
+				</li>
+				<li class="links">
+					<a class="txt" href="{{ url_for('crop') }}">Crop</a>
+				</li>
+				<li class="links">
+					<a class="txt" href="{{ url_for('fertilizer') }}">Fertilizer</a>
+				</li>
+				<li class="links">
+					<a class="txt" href="{{ url_for('npk_value') }}">NPK Values</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+    <!--   Info page  -->
+    <section class="banner_w3lspvt" id="home">
+        <div class="csslider infinity" id="slider1">
+            <div class="banner-top">
+                <div class="overlay">
+                    <div class="container">
+                        <div class="w3layouts-banner-info text-center">
+                            <h3 class="text-wh">Farmtech</h3>
+                            <h4 class="text-wh mx-auto my-4"><b>Get Quality information about your farming strategy.</b></h4>
+                            <br>
+                            <h4 class="text-wh mx-auto my-4"><strong> Here are some questions we'll answer</strong></h4>
+                            <p class="text-li mx-auto mt-2">
+                                1. What crop to plant here? <br>
+                                2. Which fertilizer to be used? <br>
+                                3. What is the NPK value of the soil?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- our services -->
+    <section class="services-section">
+        <div class="container">
+            <h3 class="section-title">Our Services</h3>
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-item">
+                    <div class="service-image">
+                        <img src="/static/images/s1.jpg" alt="Crop Service Image">
+                    </div>
+                    <div class="service-content">
+                        <h4>Crop Recommendation</h4>
+                        <p>Get tailored recommendations on the best crops to grow based on your location and soil conditions.</p>
+                        
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-item">
+                    <div class="service-image">
+                        <img src="/static/images/s2.jpg" alt="Fertilizer Service Image">
+                    </div>
+                    <div class="service-content">
+                        <h4>Fertilizer Guidance</h4>
+                        <p>Discover the most suitable fertilizers for your soil type and optimize crop yields effectively.</p>
+                        
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-item">
+                    <div class="service-image">
+                        <img src="/static/images/s4.jpg" alt="Crop Disease Service Image">
+                    </div>
+                    <div class="service-content">
+                        <h4>NPK Value</h4>
+                        <p>Get Your Npk Values of your soil by simply selecting  your soil </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+        <!--    Footer  -->
+    <footer>
+        <div class = 'container'>
+            <div class='banner'>
+                <div class='left'>FarmTech</div>
+                <div class='right'>
+                    <p>still pending</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

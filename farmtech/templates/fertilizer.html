@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmtech</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/tablogo.png') }}"/>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel='stylesheet' type='text/css' />
+    <script type="text/JavaScript" src="{{ url_for('static', filename='scripts/cities.js') }}"></script>
+
+</head>
+<body>
+    <nav>
+        <img src="{{ url_for('static', filename='images/logo_f.jpeg') }}">
+        <div class="logo">FarmTech</div>
+            <ul class="navLinks">
+                <li class="links">
+                    <a class="txt" href="{{ url_for('home') }}">Home</a>
+                </li>
+                <li class="links">
+                    <a class="txt" href="{{ url_for('crop') }}">Crop</a>
+                </li>
+                <li class="links">
+                    <a class="txt" href="{{ url_for('fertilizer') }}">Fertilizer</a>
+                </li>
+                <li class="links">
+                    <a class="txt" href="{{ url_for('npk_value') }}">NPK Values</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class = "fertilizer">
+      <h2>Generate best fertilizer options for your crop</h2>
+
+      <div class="form-container">
+          <form method="POST" action="{{ url_for('fert_recommend') }}">
+              
+              
+              <div class="form-group">
+                  <label for="Nitrogen">Nitrogen (N)</label>
+                  <input type="number" class="form-control" id="Nitrogen" name="nitrogen" placeholder="Enter value" required />
+              </div>
+
+              
+              <div class="form-group">
+                  <label for="Phosphorous">Phosphorous (P)</label>
+                  <input type="number" class="form-control" id="Phosphorous" name="phosphorous" placeholder="Enter value" required />
+              </div>
+
+              
+              <div class="form-group">
+                  <label for="Pottasium">Potassium (K)</label>
+                  <input type="number" class="form-control" id="Pottasium" name="pottasium" placeholder="Enter value" required />
+              </div>
+    <div class="form-group">
+      <label for="crop" style="font-size: 17px"
+        ><b>Crop you want to grow</b></label
+      >
+      <select
+        name="cropname"
+        class="form-control"
+        id="crop"
+        placeholder="Select a crop"
+        style="font-weight: bold"
+        required
+      >
+        <option selected>Select crop</option>
+        <option>rice</option>
+        <option>maize</option>
+        <option>chickpea</option>
+        <option>kidneybeans</option>
+        <option>pigeonpeas</option>
+        <option>mothbeans</option>
+        <option>mungbean</option>
+        <option>blackgram</option>
+        <option>lentil</option>
+        <option>pomegranate</option>
+        <option>banana</option>
+        <option>mango</option>
+        <option>grapes</option>
+        <option>watermelon</option>
+        <option>muskmelon</option>
+        <option>apple</option>
+        <option>orange</option>
+        <option>papaya</option>
+        <option>coconut</option>
+        <option>cotton</option>
+        <option>jute</option>
+        <option>coffee</option>
+      </select>
+    </div>
+
+    <button type="submit">Predict</button>
+            </form>
+        </div>
+    </section>
+
+
+
+    
+       <footer>
+        <div class = 'container'>
+            <div class='banner'>
+                <div class='left'>FarmTech</div>
+                <div class='right'>
+                    <p>still pending</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
